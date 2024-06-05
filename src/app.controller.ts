@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/api/time')
+  @Get('time')
   getTime(): JSON {
     return JSON.parse(JSON.stringify({ time: this.appService.getTime() }));
   }
