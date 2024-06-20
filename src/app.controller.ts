@@ -9,4 +9,9 @@ export class AppController {
   getTime(): JSON {
     return JSON.parse(JSON.stringify({ time: this.appService.getTime() }));
   }
+
+  @Get('timestring')
+  getTimeString(): string {
+    return this.appService.getTime();
+  }
 }
